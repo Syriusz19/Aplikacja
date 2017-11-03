@@ -15,6 +15,7 @@
 		4210013F1FAB09E1007CD40D /* BazaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210013E1FAB09E1007CD40D /* BazaTests.swift */; };
 		4210014A1FAB09E1007CD40D /* BazaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421001491FAB09E1007CD40D /* BazaUITests.swift */; };
 		421001581FAB4762007CD40D /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421001571FAB4762007CD40D /* BooksViewController.swift */; };
+		4210015A1FAC78D9007CD40D /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421001591FAC78D9007CD40D /* BookCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		421001491FAB09E1007CD40D /* BazaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BazaUITests.swift; sourceTree = "<group>"; };
 		4210014B1FAB09E1007CD40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		421001571FAB4762007CD40D /* BooksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		421001591FAC78D9007CD40D /* BookCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				421001321FAB09E1007CD40D /* LaunchScreen.storyboard */,
 				421001351FAB09E1007CD40D /* Info.plist */,
 				421001571FAB4762007CD40D /* BooksViewController.swift */,
+				421001591FAC78D9007CD40D /* BookCell.swift */,
 			);
 			path = Baza;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4210015A1FAC78D9007CD40D /* BookCell.swift in Sources */,
 				4210012C1FAB09E1007CD40D /* ViewController.swift in Sources */,
 				4210012A1FAB09E1007CD40D /* AppDelegate.swift in Sources */,
 				421001581FAB4762007CD40D /* BooksViewController.swift in Sources */,

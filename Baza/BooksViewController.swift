@@ -8,33 +8,55 @@
 
 import UIKit
 
-class BooksViewController: UIViewController, UITableViewDataSource {
+class BooksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, BookCellDelegate {
+    
+    var myList: [String] = ["Początek przymierza","Dark Eater Midir", "Twoj koniec jest bliski", "Apokalipsa", "Podstawy magii", "Jak latać na miotle", "deszcz a deszczyk", " Caryca Katarzyna i jej podboje", "Powstanie nieudane", "Początek końca", "tam gdzie ty tam nie ma nic", "aq", "sw", "dsa", "asdsadsadasd", "ghsdhfsd", "asdasdasd"]
     
     
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var actualBook: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
+        self.tableView.delegate = self
 
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        actualBook.text = myList[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 16
+        return (myList.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var myList: [String] = ["Początek przymierza","Dark Eater Midir", "Twoj koniec jest bliski", "Apokalipsa", "Podstawy magii", "Jak latać na miotle", "deszcz a deszczyk", " Caryca Katarzyna i jej podboje", "Powstanie nieudane", "Początek końca", "tam gdzie ty tam nie ma nic", "aq", "sw", "dsa", "asdsadsadasd", "ghsdhfsd"]
-        var cell = self.tableView.dequeueReusableCell(withIdentifier: "Cellka")!
-        cell.textLabel?.text = "ytgygyfyffr\(indexPath.row + 1) "
+        
+        var cell = self.tableView.dequeueReusableCell(withIdentifier: "Cellka") as! BookCell
+        cell.noumberLabel.text = "\(indexPath.row + 1)"
+        cell.tableLabel.text = "\(myList[indexPath.row])"
+        cell.deleteDelegate = self
+        cell.indexPath = indexPath.row
+        
+        
         return cell
+    }
+    
+    func deleteRow (indexPath: Int)
+    {
+        myList.remove(at: indexPath)
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
+    
+    
     
 
     /*

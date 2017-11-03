@@ -26,7 +26,10 @@ class ViewController: UIViewController {
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func exitToLogin(_ segue:UIStoryboardSegue)
+    {
+        print("exit to log out")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,6 +41,8 @@ class ViewController: UIViewController {
         var password:String? = passwordField.text
         if(login == "Janusz" && password == "zaq"){
             print("Zalogowano")
+            self.performSegue(withIdentifier: "afterLogIn", sender: self)
+            
         }
         else
         {
