@@ -48,8 +48,10 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
     func deleteRow (indexPath: Int)
     {
         myList.remove(at: indexPath)
-        
+        tableView.reloadData()
+        actualBook.text = "Nie czytasz nic"
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
