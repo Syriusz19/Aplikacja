@@ -47,9 +47,12 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func deleteRow (indexPath: Int)
     {
+        if actualBook.text == myList[indexPath]
+        {
+            actualBook.text = "Nie czytasz nic"
+        }
         myList.remove(at: indexPath)
         tableView.reloadData()
-        actualBook.text = "Nie czytasz nic"
     }
     
     
