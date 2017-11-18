@@ -153,7 +153,9 @@
                                                         <constraint firstAttribute="width" constant="60" id="hpb-78-1e9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="Delete"/>
+                                                    <state key="normal" title="Delete">
+                                                        <color key="titleColor" red="1" green="0.039765733839813522" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="destroy:" destination="Yw1-Yn-ctG" eventType="touchUpInside" id="Mt5-5v-hoQ"/>
                                                     </connections>
@@ -204,6 +206,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bH-Ob-evF">
+                                <rect key="frame" x="24" y="181" width="30" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.29056757086922019" green="0.90185799870466321" blue="0.22611065084274345" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="insert:" destination="PsZ-Ii-fiL" eventType="touchUpInside" id="YWI-zj-skE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -211,9 +223,11 @@
                             <constraint firstItem="3I6-Pc-bgn" firstAttribute="height" secondItem="fbo-aa-0WW" secondAttribute="height" id="2kT-La-tdE"/>
                             <constraint firstAttribute="leading" secondItem="3I6-Pc-bgn" secondAttribute="leading" constant="-10" id="7cT-l4-lRz"/>
                             <constraint firstItem="cgo-6f-3YK" firstAttribute="top" secondItem="7cV-XA-gr2" secondAttribute="bottom" constant="20" id="Bbs-hi-WGo"/>
+                            <constraint firstItem="1bH-Ob-evF" firstAttribute="leading" secondItem="9cB-WB-DAw" secondAttribute="leading" id="CyK-rc-6gT"/>
                             <constraint firstItem="n8N-TJ-7BW" firstAttribute="top" secondItem="9cB-WB-DAw" secondAttribute="bottom" constant="-28" id="Ew8-Un-gzf"/>
                             <constraint firstItem="9cB-WB-DAw" firstAttribute="top" secondItem="IbP-Wx-YkN" secondAttribute="top" constant="-50" id="JSw-Oh-ZxE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n8N-TJ-7BW" secondAttribute="trailing" constant="10" id="QKc-Mt-BjB"/>
+                            <constraint firstItem="1bH-Ob-evF" firstAttribute="bottom" secondItem="cgo-6f-3YK" secondAttribute="bottom" id="Qyb-Ql-Ly7"/>
                             <constraint firstItem="IbP-Wx-YkN" firstAttribute="leading" secondItem="cgo-6f-3YK" secondAttribute="leading" id="Ws3-oI-4qB"/>
                             <constraint firstItem="n8N-TJ-7BW" firstAttribute="leading" secondItem="9cB-WB-DAw" secondAttribute="leading" constant="40" id="dF7-Nb-900"/>
                             <constraint firstItem="9cB-WB-DAw" firstAttribute="centerX" secondItem="3I6-Pc-bgn" secondAttribute="centerX" constant="6.7999999999999998" id="eYa-JG-7v1"/>

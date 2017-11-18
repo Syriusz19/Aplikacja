@@ -44,7 +44,33 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return cell
     }
+ 
     
+    
+    @IBAction func insert(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Wpisz nowy tytuł.", message: "", preferredStyle: .alert)
+        alert.addTextField()
+        var action1 = UIAlertAction(title: "Add", style: .default, handler: { _ in
+            
+            if let textfild = alert.textFields?.first{
+                
+                if textfild.text != "" {
+                    
+                    self.myList.append(textfild.text!)
+                    self.tableView.reloadData()
+                }
+                else {
+                    textfild.text = "uzupełnij pole"
+                }
+            }
+        })
+        alert.addAction(action1)
+        var action2 = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(action2)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
     func deleteRow (indexPath: Int)
     {
         if actualBook.text == myList[indexPath]
